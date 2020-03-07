@@ -12,18 +12,18 @@ import org.maxgamer.quickshop.QuickShop;
  * 
  */
 public class ChatListener implements Listener {
-	QuickShop plugin;
+  QuickShop plugin;
 
-	public ChatListener(QuickShop plugin) {
-		this.plugin = plugin;
-	}
+  public ChatListener(QuickShop plugin) {
+    this.plugin = plugin;
+  }
 
-	@EventHandler(priority = EventPriority.LOWEST)
-	public void onChat(final AsyncPlayerChatEvent e) {
-		if (!plugin.getShopManager().getActions().containsKey(e.getPlayer().getUniqueId())) {
-			return;
-		}
-		plugin.getShopManager().handleChat(e.getPlayer(), e.getMessage());
-		e.setCancelled(true);
-	}
+  @EventHandler(priority = EventPriority.LOWEST)
+  public void onChat(final AsyncPlayerChatEvent e) {
+    if (!plugin.getShopManager().getActions().containsKey(e.getPlayer().getUniqueId())) {
+      return;
+    }
+    plugin.getShopManager().handleChat(e.getPlayer(), e.getMessage());
+    e.setCancelled(true);
+  }
 }

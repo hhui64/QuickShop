@@ -1,5 +1,4 @@
 *.class
-lib/
 src/test/
 .settings/
 target/
@@ -7,3 +6,4 @@ target/
 *.iml
 .classpath
 .project
+.vscode/
