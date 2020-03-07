@@ -14,17 +14,17 @@ import com.dthielke.herochat.Chatter.Result;
  * 
  */
 public class HeroChatListener implements Listener {
-	QuickShop plugin;
+  QuickShop plugin;
 
-	public HeroChatListener(QuickShop plugin) {
-		this.plugin = plugin;
-	}
+  public HeroChatListener(QuickShop plugin) {
+    this.plugin = plugin;
+  }
 
-	@EventHandler(ignoreCancelled = true, priority = EventPriority.LOWEST)
-	public void onHeroChat(ChannelChatEvent e) {
-		if (!plugin.getShopManager().getActions().containsKey(e.getSender().getPlayer().getUniqueId()))
-			return;
-		plugin.getShopManager().handleChat(e.getSender().getPlayer(), e.getMessage());
-		e.setResult(Result.FAIL);
-	}
+  @EventHandler(ignoreCancelled = true, priority = EventPriority.LOWEST)
+  public void onHeroChat(ChannelChatEvent e) {
+    if (!plugin.getShopManager().getActions().containsKey(e.getSender().getPlayer().getUniqueId()))
+      return;
+    plugin.getShopManager().handleChat(e.getSender().getPlayer(), e.getMessage());
+    e.setResult(Result.FAIL);
+  }
 }
