@@ -24,12 +24,12 @@ public class WorldListener implements Listener {
   @EventHandler
   public void onWorldLoad(WorldLoadEvent e) {
     /*
-     * ********************************************
-     * This listener fixes any broken world
-     * references. Such as hashmap lookups 
-     * will fail, because the World reference is
-     * different, but the world value is the same.
-     * ********************************************
+     * *****************************************************************************
+     * This listener fixes any broken world references. Such as hashmap lookups will
+     * fail, because the World reference is different, but the world value is the
+     * same.
+     * *****************************************************************************
+     * 
      */
     World world = e.getWorld();
     // New world data

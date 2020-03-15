@@ -50,7 +50,7 @@ public class MsgUtil {
         YamlConfiguration defMessages = YamlConfiguration.loadConfiguration(new InputStreamReader(msgIn));
         messages.setDefaults(defMessages);
       } else {
-         plugin.getLogger().info("Missing messages.yml!");
+         plugin.getLogger().info("Missing default messages.yml!");
       }
     } catch (Exception e) {
       plugin.getLogger().info("Failed to load default messages: " + e.getMessage());
