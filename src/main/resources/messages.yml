@@ -42,6 +42,7 @@ refill-success: "&aRefill success"
 empty-success: "&aEmpty success"
 admin-shop: "AdminShop"
 unknown-owner: "Unknown"
+shop-limited: "&cYou have already created a maximum of {0}/{1} shops!"
 
 menu:
     successful-purchase: "&aSuccessfully Purchased:"

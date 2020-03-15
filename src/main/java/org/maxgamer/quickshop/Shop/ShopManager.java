@@ -239,7 +239,7 @@ public class ShopManager {
         }
         int max = plugin.getShopLimit(p);
         if (owned + 1 > max) {
-          p.sendMessage(ChatColor.RED + "You have already created a maximum of " + owned + "/" + max + " shops!");
+          p.sendMessage(MsgUtil.getMessage("shop-limited", String.valueOf(owned), String.valueOf(max)));
           return false;
         }
       }
