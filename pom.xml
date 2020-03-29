@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.maxgamer</groupId>
   <artifactId>QuickShop</artifactId>
-  <version>0.9.38.2</version>
+  <version>0.9.38.3</version>
 
   <licenses>
     <license>
@@ -44,11 +44,6 @@
     </resources>
   </build>
   <repositories>
-    <!-- <repository>
-      <id> lss233-minecraft </id>
-      <name> Lss233's Minecraft Repository </name>
-      <url>http://lss233.littleservice.cn/repositories/minecraft</url>
-    </repository> -->
     <repository>
       <id>bukkit-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
@@ -60,6 +55,10 @@
     <repository>
       <id>vault-repo</id>
       <url>http://nexus.hc.to/content/repositories/pub_releases</url>
+    </repository>
+    <repository>
+      <id>lang-utils-repo</id>
+      <url>https://raw.github.com/MascusJeoraly/LanguageUtils/mvn-repo/</url>
     </repository>
   </repositories>
   <dependencies>
@@ -98,6 +97,11 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.meowj</groupId>
+      <artifactId>LangUtils</artifactId>
+      <version>1.9</version>
     </dependency>
     <dependency>
       <groupId>org.bukkit.craftbukkit.v1_12_R1</groupId>

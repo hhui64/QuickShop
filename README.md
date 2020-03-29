@@ -2,7 +2,11 @@
 QuickShop is a shop plugin, that allows players to sell items from a chest with no commands.  It allows players to purchase any number of items easily.  In fact, this plugin doesn't even have any commands that a player would ever need!
 
 ## Support
-Open a new issue here: https://github.com/KaiKikuchi/QuickShop/issues
+**This repo is forked from [QuickShop](https://github.com/KaiKikuchi/QuickShop), The purpose is to fix some bugs.**
+
+**Note: Only support to Minecraft 1.12.x, If you need more features and high version support, Maybe we should consider [QuickShop-Reremake](https://github.com/Ghost-chu/QuickShop-Reremake).**
+
+Open a new issue here: https://github.com/hhui64/QuickShop/issues
 
 ## Features
 - Easy to use

@@ -50,7 +50,7 @@ public class MsgUtil {
         YamlConfiguration defMessages = YamlConfiguration.loadConfiguration(new InputStreamReader(msgIn));
         messages.setDefaults(defMessages);
       } else {
-         plugin.getLogger().info("Missing default messages.yml!");
+        plugin.getLogger().info("Missing default messages.yml!");
       }
     } catch (Exception e) {
       plugin.getLogger().info("Failed to load default messages: " + e.getMessage());
@@ -174,8 +174,7 @@ public class MsgUtil {
       p.sendMessage(ChatColor.DARK_PURPLE + "+--------------------" + MsgUtil.getMessage("menu.enchants")
           + "-----------------------+");
       for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-        p.sendMessage(
-            ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " " + entries.getValue());
+        p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + Util.getEncName(entries));
       }
     }
     try {
@@ -188,8 +187,7 @@ public class MsgUtil {
           p.sendMessage(ChatColor.DARK_PURPLE + "+-----------------" + MsgUtil.getMessage("menu.stored-enchants")
               + "--------------------+");
           for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-            p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " "
-                + entries.getValue());
+            p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + Util.getEncName(entries));
           }
         }
       }
@@ -210,17 +208,7 @@ public class MsgUtil {
       p.sendMessage(ChatColor.DARK_PURPLE + "+--------------------" + MsgUtil.getMessage("menu.enchants")
           + "-----------------------+");
       for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-        p.sendMessage(
-            ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " " + entries.getValue());
-      }
-    }
-    enchs = shop.getItem().getItemMeta().getEnchants();
-    if (enchs != null && !enchs.isEmpty()) {
-      p.sendMessage(ChatColor.DARK_PURPLE + "+-----------------" + MsgUtil.getMessage("menu.stored-enchants")
-          + "--------------------+");
-      for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-        p.sendMessage(
-            ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " " + entries.getValue());
+        p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + Util.getEncName(entries));
       }
     }
     try {
@@ -233,8 +221,7 @@ public class MsgUtil {
           p.sendMessage(ChatColor.DARK_PURPLE + "+-----------------" + MsgUtil.getMessage("menu.stored-enchants")
               + "--------------------+");
           for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-            p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " "
-                + entries.getValue());
+            p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + Util.getEncName(entries));
           }
         }
       }
@@ -267,8 +254,7 @@ public class MsgUtil {
       p.sendMessage(ChatColor.DARK_PURPLE + "+--------------------" + MsgUtil.getMessage("menu.enchants")
           + "-----------------------+");
       for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-        p.sendMessage(
-            ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " " + entries.getValue());
+        p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + Util.getEncName(entries));
       }
     }
     try {
@@ -281,8 +267,7 @@ public class MsgUtil {
           p.sendMessage(ChatColor.DARK_PURPLE + "+--------------------" + MsgUtil.getMessage("menu.stored-enchants")
               + "-----------------------+");
           for (Entry<Enchantment, Integer> entries : enchs.entrySet()) {
-            p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + entries.getKey().getName() + " "
-                + entries.getValue());
+            p.sendMessage(ChatColor.DARK_PURPLE + "| " + ChatColor.YELLOW + Util.getEncName(entries));
           }
         }
       }
