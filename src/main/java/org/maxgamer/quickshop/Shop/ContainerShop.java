@@ -448,7 +448,7 @@ public class ContainerShop implements Shop {
     } else if (this.isBuying()) {
       lines[1] = MsgUtil.getMessage("signs.buying", "" + this.getRemainingSpace());
     }
-    lines[2] = MsgUtil.getMessage("signs.item", Util.getNameForSign(this.item));
+    lines[2] = MsgUtil.getMessage("signs.item", Util.getName(this.item));
     lines[3] = MsgUtil.getMessage("signs.price", Util.format(this.getPrice()));
     this.setSignText(lines);
   }
@@ -525,6 +525,10 @@ public class ContainerShop implements Shop {
   public String getDataName() {
     return Util.getName(this.getItem());
   }
+
+  // public String getEncName() {
+  //   return Util.getEncName();
+  // }
 
   /**
    * Deletes the shop from the list of shops and queues it for database deletion

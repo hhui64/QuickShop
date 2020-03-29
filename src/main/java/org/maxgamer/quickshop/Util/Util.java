@@ -8,6 +8,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.meowj.langutils.lang.LanguageHelper;
+
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
@@ -26,6 +29,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
 import org.bukkit.material.Sign;
 import org.bukkit.potion.Potion;
@@ -402,6 +406,11 @@ public class Util {
    * @return The human readable item name.
    */
   public static String getName(ItemStack itemStack) {
+    String localName = LanguageHelper.getItemDisplayName(itemStack, plugin.getConfig().getString("lang"));
+    if (localName != null) {
+      return localName;
+    }
+
     if (NMS.isPotion(itemStack.getType())) {
       return CustomPotionsName.getFullName(itemStack);
     }
@@ -413,6 +422,17 @@ public class Util {
 
     String vanillaName = getDataName(itemStack.getType(), itemStack.getDurability());
     return prettifyText(vanillaName);
+  }
+
+  /**
+   * Get the enchantment name and level of the item.
+   * 
+   * @param entry
+   * @return Enchantment name and level (Translated)
+   * @author hhui64 <907322015@qq.com>
+   */
+  public static String getEncName(Entry<Enchantment, Integer> entry) {
+    return LanguageHelper.getEnchantmentDisplayName(entry, plugin.getConfig().getString("lang"));
   }
 
   /**
