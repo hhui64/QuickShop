@@ -3,6 +3,8 @@ package org.maxgamer.quickshop.Listeners;
 import java.util.HashMap;
 import java.util.UUID;
 
+import com.meowj.langutils.locale.LocaleHelper;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -153,6 +155,8 @@ public class PlayerListener implements Listener {
   public void onMove(PlayerMoveEvent e) {
     if (e.isCancelled())
       return;
+    if (plugin.getShopManager().getActions().isEmpty())
+      return;
     Info info = plugin.getShopManager().getActions().get(e.getPlayer().getUniqueId());
     if (info != null) {
       Player p = e.getPlayer();
@@ -172,6 +176,8 @@ public class PlayerListener implements Listener {
 
   @EventHandler
   public void onTeleport(PlayerTeleportEvent e) {
+    if (plugin.getShopManager().getActions().isEmpty())
+      return;
     PlayerMoveEvent me = new PlayerMoveEvent(e.getPlayer(), e.getFrom(), e.getTo());
     onMove(me);
   }
@@ -189,6 +195,8 @@ public class PlayerListener implements Listener {
 
   @EventHandler
   public void onPlayerQuit(PlayerQuitEvent e) {
+    if (plugin.getShopManager().getActions().isEmpty())
+      return;
     // Remove them from the menu
     plugin.getShopManager().getActions().remove(e.getPlayer().getUniqueId());
   }
