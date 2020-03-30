@@ -4,7 +4,11 @@ QuickShop is a shop plugin, that allows players to sell items from a chest with 
 ## Support
 **This repo is forked from [QuickShop](https://github.com/KaiKikuchi/QuickShop), The purpose is to fix some bugs.**
 
+**这个 repo 是 [QuickShop](https://github.com/KaiKikuchi/QuickShop) 的分支，目的是为了修复某些BUG。**
+
 **Note: Only support to Minecraft 1.12.x, If you need more features and high version support, Maybe we should consider [QuickShop-Reremake](https://github.com/Ghost-chu/QuickShop-Reremake).**
+
+**警告：只支持 Minecraft 1.12.x，如果你需要更多功能和高版本支持，或许该考虑使用 [QuickShop-Reremake](https://github.com/Ghost-chu/QuickShop-Reremake)。**
 
 Open a new issue here: https://github.com/hhui64/QuickShop/issues
 
